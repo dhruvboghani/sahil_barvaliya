@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sahil Barvaliya, CA | Accounting &amp; Bookkeeping for US Businesses</title>
+<meta name="description" content="ICAI-qualified Chartered Accountant providing bookkeeping, payroll, financial reporting and property management accounting to US businesses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1b2559;--ink:#252c4a;--muted:#5d6580;--gold:#b88a1e;--gold-soft:#f6efdc;--bg:#fbfaf7;--tint:#eef2fb;--line:#dfe3ee;--white:#fff;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:Newsreader,Georgia,"Times New Roman",serif;color:var(--navy);line-height:1.15;margin:0;font-weight:600}
+h1{font-size:clamp(2.3rem,5.2vw,3.7rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,3.4vw,2.5rem);letter-spacing:-.005em}
+h3{font-size:1.25rem}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.lead{color:var(--muted);max-width:60ch;margin-top:14px}
+.head{margin-bottom:40px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(251,250,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:1.3rem;color:var(--navy);text-decoration:none}
+.brand span{color:var(--gold)}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-size:.95rem;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--navy)}
+.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;padding:13px 24px;border-radius:6px;border:2px solid var(--navy);transition:background .2s,color .2s}
+.btn:hover{background:#fff;color:var(--navy)}
+.btn.alt{background:transparent;color:var(--navy)}
+.btn.alt:hover{background:var(--navy);color:#fff}
+.btn.sm{padding:9px 18px;font-size:.92rem}
+.menu{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:8px 12px;font:inherit;color:var(--navy);cursor:pointer}
+
+/* hero */
+.hero{padding:72px 0 80px;background:linear-gradient(180deg,var(--tint),var(--bg))}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero p.sub{font-size:1.2rem;color:var(--muted);margin:22px 0 32px;max-width:52ch}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.creds{display:flex;gap:34px;flex-wrap:wrap;margin-top:44px;padding-top:26px;border-top:1px solid var(--line)}
+.creds b{display:block;font-family:Newsreader,Georgia,serif;font-size:1.9rem;color:var(--navy);line-height:1.1}
+.creds span{font-size:.9rem;color:var(--muted)}
+
+/* ledger card (the memorable element) */
+.ledger{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px -22px rgba(27,37,89,.35);overflow:hidden}
+.ledger-top{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;background:var(--navy);color:#fff;font-weight:600;font-size:.95rem}
+.ledger-top small{color:#e7cf8c;font-weight:500}
+.ledger table{width:100%;border-collapse:collapse;font-size:.95rem}
+.ledger th{font-weight:600;color:var(--muted);text-align:left;padding:12px 22px;border-bottom:2px solid var(--navy);font-size:.85rem}
+.ledger th:last-child,.ledger td:last-child{text-align:right}
+.ledger td{padding:11px 22px;border-bottom:1px dashed var(--line);font-variant-numeric:tabular-nums}
+.ledger tr.total td{border-bottom:0;border-top:2px solid var(--navy);font-weight:700;color:var(--navy);background:var(--gold-soft)}
+.ledger .ok{display:flex;gap:10px;align-items:center;padding:14px 22px;font-size:.9rem;color:var(--muted);background:#fafbfe}
+.tick{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--gold);color:#fff;font-size:.75rem;flex:none}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.about p+p{margin-top:16px}
+.points{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.points li{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:8px}
+
+/* services */
+.bg-tint{background:var(--tint)}
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:30px}
+.card h3{margin-bottom:6px}
+.card>p{color:var(--muted);font-size:.96rem;margin-bottom:18px}
+.ticks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:9px 18px;font-size:.96rem}
+.ticks li{position:relative;padding-left:24px}
+.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--gold);font-weight:700}
+
+/* property */
+.prop{background:var(--navy);color:#e9ecf8;border-radius:14px;padding:48px;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+.prop h2{color:#fff}
+.prop p{color:#c9cfe8;margin-top:16px}
+.badge{display:inline-block;margin-top:22px;padding:11px 16px;border-left:3px solid #e7cf8c;background:rgba(255,255,255,.08);color:#f1dfa4;font-style:italic;font-weight:500}
+.prop .ticks li::before{color:#e7cf8c}
+.prop .ticks{color:#fff}
+
+/* industries */
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:12px 22px;font-weight:600;color:var(--navy)}
+.chip.on{background:var(--gold-soft);border-color:#e3cf9a}
+
+/* help / why */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.item{padding:26px;border-top:3px solid var(--navy);background:#fff;border-radius:0 0 10px 10px;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.item h3{font-size:1.15rem;margin-bottom:8px}
+.item p{color:var(--muted);font-size:.97rem}
+.item.g{border-top-color:var(--gold)}
+
+/* tools */
+.tools{display:grid;gap:18px}
+.row{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.row b{font-family:Newsreader,Georgia,serif;font-size:1.1rem;color:var(--navy)}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{background:#fff;border:1px solid var(--line);padding:7px 16px;border-radius:6px;font-weight:500;font-size:.95rem}
+.note{margin-top:22px;color:var(--muted)}
+
+/* engagement */
+.tbl{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tbl th{background:var(--navy);color:#fff;text-align:left;padding:15px 22px;font-weight:600}
+.tbl td{padding:16px 22px;border-top:1px solid var(--line)}
+.tbl td:first-child{font-weight:600;color:var(--navy);width:36%}
+.tbl tr:nth-child(even) td{background:#fafbfe}
+.scroll{overflow-x:auto;max-width:100%}
+.addon{font-size:.8rem;background:var(--gold-soft);color:#7a5a0c;padding:2px 9px;border-radius:99px;margin-left:8px;font-weight:600}
+
+/* contact */
+.contact{background:var(--navy);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact p.lead{color:#c9cfe8;margin:14px auto 30px}
+.contact .btn{background:var(--gold);border-color:var(--gold);color:#1a1a1a}
+.contact .btn:hover{background:#fff;border-color:#fff}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px;text-align:left}
+.cc{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:22px}
+.cc small{display:block;color:#e7cf8c;font-weight:600;margin-bottom:4px}
+.cc a{color:#fff;text-decoration:none;overflow-wrap:anywhere}
+.cc a:hover{text-decoration:underline}
+footer{background:#141b45;color:#aab1d3;text-align:center;font-size:.9rem;padding:24px 24px calc(24px + env(safe-area-inset-bottom,0px))}
+
+/* load moment: ledger rows settle once */
+@media (prefers-reduced-motion:no-preference){
+.ledger tbody tr{animation:in .6s both}
+.ledger tbody tr:nth-child(2){animation-delay:.12s}.ledger tbody tr:nth-child(3){animation-delay:.24s}
+.ledger tbody tr:nth-child(4){animation-delay:.36s}.ledger tbody tr:nth-child(5){animation-delay:.48s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}}
+
+@media(max-width:920px){
+section{padding:64px 0}
+.hero-grid,.about,.prop{grid-template-columns:1fr;gap:36px}
+.svc,.grid3,.cards{grid-template-columns:1fr}
+.prop{padding:30px 24px}
+.row{grid-template-columns:1fr;gap:10px}
+.menu{display:block}
+nav{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);display:none;padding:10px 24px 20px}
+nav.open{display:block}
+nav ul{flex-direction:column;gap:14px}
+.head-cta{display:none}
+}
+@media(max-width:520px){.ticks{grid-template-columns:1fr}.tbl td,.tbl th{padding:13px 14px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap nav">
+<a class="brand" href="#top">Sahil Barvaliya<span>, CA</span></a>
+<button class="menu" aria-expanded="false" aria-controls="nav" id="mb">Menu</button>
+<nav id="nav" aria-label="Main">
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#property">Property accounting</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#engage">Engagement</a></li>
+</ul>
+</nav>
+<a class="btn sm head-cta" href="#contact">Book a call</a>
+</div>
+</header>
+
+<main id="top">
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<h1>Accurate books for US businesses, kept by a Chartered Accountant.</h1>
+<p class="sub">Bookkeeping, payroll and financial reporting that helps you keep accurate books and make better financial decisions, at a fraction of the cost of a local accountant.</p>
+<div class="cta">
+<a class="btn" href="#contact">Schedule a free 30-minute call</a>
+<a class="btn alt" href="#services">View services</a>
+</div>
+<div class="creds">
+<div><b>3+ years</b><span>serving US-based clients</span></div>
+<div><b>7+ industries</b><span>supported with accurate books</span></div>
+<div><b>CA (ICAI)</b><span>qualified Chartered Accountant</span></div>
+</div>
+</div>
+<div class="ledger" aria-label="Sample month-end reconciliation">
+<div class="ledger-top"><span>Month-end close</span><small>Reconciled</small></div>
+<table>
+<thead><tr><th>Account</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Bank &amp; credit cards</td><td>Matched</td></tr>
+<tr><td>Accounts payable</td><td>Reconciled</td></tr>
+<tr><td>Accounts receivable</td><td>Reconciled</td></tr>
+<tr><td>Payroll &amp; taxes</td><td>Reconciled</td></tr>
+<tr class="total"><td>Books</td><td>Closed</td></tr>
+</tbody>
+</table>
+<div class="ok"><span class="tick">✓</span>Financial statements ready for review</div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap about">
+<div>
+<h2>A dependable accounting partner for businesses across industries.</h2>
+<p class="lead">I’m a qualified Chartered Accountant with 3+ years of experience providing bookkeeping, accounting and financial reporting services to US-based businesses.</p>
+<p class="lead">I maintain accurate financial records, streamline accounting processes and deliver timely, decision-ready reports. That combines the rigor of a CA qualification with hands-on experience in US accounting workflows. I also bring added depth in property management accounting for clients who need it.</p>
+</div>
+<div>
+<h3 style="margin-bottom:16px">What this means for you</h3>
+<ul class="points">
+<li><span class="tick">✓</span>CPA-firm-level accuracy, without the CPA-firm overhead</li>
+<li><span class="tick">✓</span>Comfortable across industries, not locked into one niche</li>
+<li><span class="tick">✓</span>One dedicated point of contact who owns your books end to end</li>
+<li><span class="tick">✓</span>Specialized support for property and real estate portfolios</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="services" class="bg-tint">
+<div class="wrap">
+<div class="head">
+<h2>Services</h2>
+<p class="lead">Full-cycle bookkeeping and accounts management, tailored to your business, with reporting that turns your numbers into decisions.</p>
+</div>
+<div class="svc">
+<div class="card">
+<h3>Bookkeeping &amp; accounting</h3>
+<p>Day-to-day records, closed on time every month.</p>
+<ul class="ticks"><li>Full-cycle bookkeeping</li><li>Transaction categorization</li><li>Bank &amp; credit card reconciliations</li><li>General ledger maintenance</li><li>Journal entries</li><li>Month-end &amp; year-end closing</li><li>Accruals &amp; depreciation</li><li>Financial statement preparation</li></ul>
+</div>
+<div class="card">
+<h3>Accounts payable &amp; receivable</h3>
+<p>Bills paid and invoices collected without the chasing.</p>
+<ul class="ticks"><li>Vendor bill processing</li><li>Customer invoicing</li><li>Payment processing</li><li>Collections &amp; follow-ups</li><li>AP &amp; AR reconciliations</li><li>Aging reports</li></ul>
+</div>
+<div class="card">
+<h3>Payroll accounting</h3>
+<p>Accurate payroll and clean reconciliations.</p>
+<ul class="ticks"><li>Payroll processing</li><li>Payroll journal entries</li><li>Payroll reconciliations</li><li>Gusto &amp; ADP support</li><li>Payroll tax reconciliation</li></ul>
+</div>
+<div class="card">
+<h3>Financial reporting</h3>
+<p>Reports you can act on, not just file.</p>
+<ul class="ticks"><li>Monthly financial statements</li><li>Management reports</li><li>Budget vs. actual analysis</li><li>Cash flow monitoring</li><li>Year-end reporting support</li><li>Audit support</li></ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="property">
+<div class="wrap">
+<div class="prop">
+<div>
+<h2>Property management accounting</h2>
+<p>For clients with real estate or rental portfolios, I offer dedicated property management accounting on top of core bookkeeping. It is available as an add-on to any engagement.</p>
+<div class="badge">Hands-on experience with AppFolio &amp; Xero</div>
+</div>
+<ul class="ticks">
+<li>Rent roll preparation</li><li>Owner distributions</li><li>Tenant ledger management</li><li>Maintenance expense recording</li><li>Owner statements</li><li>Move-out accounting</li><li>Security deposit accounting</li><li>AppFolio to Xero migration</li><li>Lease charge management</li><li>Property financial reporting</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="bg-tint">
+<div class="wrap">
+<div class="head">
+<h2>Comfortable across industries, not locked to just one.</h2>
+<p class="lead">From property management to healthcare and hospitality, I bring the same accuracy and consistency to every client’s books, with specialized depth in property management accounting for real estate clients.</p>
+</div>
+<div class="chips">
+<span class="chip on">Property Management</span><span class="chip on">Real Estate</span><span class="chip">Healthcare</span><span class="chip">Restaurants</span><span class="chip">Hospitality</span><span class="chip">Manufacturing</span><span class="chip">Professional Services</span>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="head"><h2>How I can help you</h2></div>
+<div class="grid3">
+<div class="item"><h3>Books you can trust</h3><p>Accurate, up-to-date records so you always know where you stand.</p></div>
+<div class="item"><h3>Time back in your day</h3><p>Full ownership of bookkeeping so you can focus on running the business.</p></div>
+<div class="item"><h3>Clarity to make decisions</h3><p>Monthly reports and analysis you can actually act on.</p></div>
+<div class="item g"><h3>Stress-free catch-up</h3><p>Backlogged or messy books brought current, without judgment.</p></div>
+<div class="item g"><h3>Payroll done right</h3><p>Accurate, on-time payroll processing and reconciliations.</p></div>
+<div class="item g"><h3>Support that scales</h3><p>From a single business to a growing portfolio, I scale with you.</p></div>
+</div>
+</div>
+</section>
+
+<section id="tools" class="bg-tint">
+<div class="wrap">
+<div class="head"><h2>Software &amp; tools</h2><p class="lead">Multi-software proficient. I work in the tools your business already uses.</p></div>
+<div class="tools">
+<div class="row"><b>Accounting platforms</b><div class="tags"><span>QuickBooks</span><span>Xero</span><span>AppFolio</span><span>Yardi</span><span>Tally</span></div></div>
+<div class="row"><b>Payroll &amp; expenses</b><div class="tags"><span>Gusto</span><span>Expensify</span></div></div>
+<div class="row"><b>Payments</b><div class="tags"><span>Bill.com</span></div></div>
+<div class="row"><b>Productivity</b><div class="tags"><span>MS Excel</span><span>Outlook</span><span>Airtable</span></div></div>
+</div>
+<p class="note">If your business runs on a platform not listed here, I’m quick to learn and adapt.</p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<div class="head"><h2>Why clients choose me</h2></div>
+<div class="grid3">
+<div class="item"><h3>Chartered Accountant (ICAI)</h3><p>Rigorous professional qualification and standards.</p></div>
+<div class="item"><h3>3+ years US accounting experience</h3><p>Experience across industries, not just one niche.</p></div>
+<div class="item"><h3>Multi-software proficient</h3><p>QuickBooks, Xero, AppFolio, Gusto, Bill.com and more.</p></div>
+<div class="item g"><h3>Accurate &amp; detail-oriented</h3><p>Precision built in from CA training and daily practice.</p></div>
+<div class="item g"><h3>Cost-effective</h3><p>CPA-firm-level quality at a competitive rate.</p></div>
+<div class="item g"><h3>Dedicated long-term support</h3><p>Timely communication and full ownership of your books.</p></div>
+</div>
+</div>
+</section>
+
+<section id="engage" class="bg-tint">
+<div class="wrap">
+<div class="head"><h2>Engagement options</h2><p class="lead">Flexible packages built around how your business needs support.</p></div>
+<div class="scroll">
+<table class="tbl">
+<thead><tr><th>Service package</th><th>Ideal for</th></tr></thead>
+<tbody>
+<tr><td>Monthly bookkeeping</td><td>Small &amp; medium businesses needing regular upkeep</td></tr>
+<tr><td>Financial reporting &amp; analysis</td><td>Business owners needing monthly or quarterly insights</td></tr>
+<tr><td>Payroll processing</td><td>Businesses with employees or contractors</td></tr>
+<tr><td>Clean-up / catch-up bookkeeping</td><td>Businesses with backlogged or messy books</td></tr>
+<tr><td>Property management accounting<span class="addon">Add-on</span></td><td>Real estate investors &amp; property managers</td></tr>
+<tr><td>Ad-hoc / project-based</td><td>One-time needs, audits, or special reports</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">Pricing is customized to the volume and complexity of your books. A tailored quote follows a brief discovery call.</p>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="wrap">
+<h2>Let’s connect</h2>
+<p class="lead">I’d love to understand your business and show you how I can add value.</p>
+<a class="btn" href="mailto:Sahilbarvaliya01@gmail.com?subject=Discovery%20call%20request">Schedule a free 30-minute discovery call</a>
+<div class="cards">
+<div class="cc"><small>Email</small><a href="mailto:Sahilbarvaliya01@gmail.com">Sahilbarvaliya01@gmail.com</a></div>
+<div class="cc"><small>Phone / WhatsApp</small><a href="https://wa.me/919727277253">+91 97272 77253</a></div>
+<div class="cc"><small>LinkedIn</small><a href="https://linkedin.com/in/sahilbarvaliya01" target="_blank" rel="noopener">linkedin.com/in/sahilbarvaliya01</a></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>© <span id="yr">2026</span> Sahil Barvaliya, CA. Accounting &amp; bookkeeping services.</footer>
+
+<script>
+(function(){
+var b=document.getElementById('mb'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
